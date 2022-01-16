@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
+import { styles } from "./style";
 function Header(props) {
 
     const AppBar = styled(MuiAppBar, {

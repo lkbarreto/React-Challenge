@@ -3,6 +3,7 @@ import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '../components/Drawer/Drawer';
 import Header from '../components/Header/Header';
+import Content from '../components/Content/Content'
 
 const drawerWidth = 240;
 
@@ -42,6 +43,7 @@ export default function Home() {
             <Header open={open} handleDrawerOpen={handleDrawerOpen} drawerWidth={drawerWidth}></Header>
             <Drawer open={open} handleDrawerClose={handleDrawerClose} handleDrawerOpen={handleDrawerOpen} drawerWidth={drawerWidth}></Drawer>
             <Main open={open}>
+                <Content></Content>
             </Main>
         </Box>
     );

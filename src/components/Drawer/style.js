@@ -1,6 +1,4 @@
-import StyleSheet from 'react-style';
-
-const styles = StyleSheet.create({
+export const styles = {
   primary: {
     background: 'green'
   },
@@ -16,6 +14,4 @@ const styles = StyleSheet.create({
       width: '100%'
     }
   }
-});
-
-export default styles;
+};

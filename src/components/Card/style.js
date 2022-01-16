@@ -1,8 +1,9 @@
-import StyleSheet from 'react-style';
-
-const styles = StyleSheet.create({
-  primary: {
-    background: 'green'
+export const styles = {
+  card: {
+    background: 'green',
+    width: 275,
+    height: 250,
+    margin: '2%'
   },
   warning: {
     background: 'yellow'
@@ -16,6 +17,4 @@ const styles = StyleSheet.create({
       width: '100%'
     }
   }
-});
-
-export default styles;
+};
