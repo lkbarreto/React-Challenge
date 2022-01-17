@@ -1,8 +1,6 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
 import { styled, useTheme } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import { AuthContext } from "../../context/authProvider"
 import IconButton from '@mui/material/IconButton';
@@ -16,7 +14,6 @@ import { styles } from "./style";
 function DrawerComponent(props) {
     const theme = useTheme();
     const {
-        movies,
         setMovies,
         page,
         setPage,
@@ -93,7 +90,7 @@ function DrawerComponent(props) {
 
                     <TextField style={styles.input} size="small" id="outlined-basic" label="Range" variant="outlined" />
 
-                    <Button disabled={searchTerm == ""} variant="contained" style={styles.button} onClick={searchMovies} endIcon={<FilterAltIcon />}>
+                    <Button disabled={searchTerm === ""} variant="contained" style={styles.button} onClick={searchMovies} endIcon={<FilterAltIcon />}>
                         Filter
                     </Button>
 
