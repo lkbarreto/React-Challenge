@@ -19,6 +19,7 @@ function Content() {
     } = useContext(AuthContext);
 
     const handleChange = (event, value) => {
+        console.log("cambio la pag"+ value)
         setPage(value);
       };
 
@@ -35,7 +36,7 @@ function Content() {
 
     useEffect(() => {
         console.log(movies)
-        getMovies(apiUrl);
+        getMovies(apiUrl+page);
     }, [page]);
     return (
         <Box style={styles.main} >

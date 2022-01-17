@@ -21,7 +21,8 @@ function DrawerComponent(props) {
         page,
         setPage,
         apiUrl,
-        setApiUrl
+        setApiUrl,
+        setNumPages
     } = useContext(AuthContext);
     const [searchTerm, setSearchTerm] = useState("");
     const DrawerHeader = styled('div')(({ theme }) => ({
@@ -45,17 +46,20 @@ function DrawerComponent(props) {
         
         fetch(SEARCH_API+searchTerm+"&page="+page)
             .then((res) => res.json())
-            .then((data) => setMovies(data.results));
+            .then((data) => {
+                setNumPages(data.total_pages);
+                setMovies(data.results)});
     };
 
-    const clear = ()=>{
+    const clear = async()=>{
         setSearchTerm("");
         setPage(1);
         setApiUrl("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=562bbdb9e5d866e02bfec9eef5edd161&page=");
-        
-        fetch(apiUrl+page)
+        await fetch(apiUrl+page)
             .then((res) => res.json())
-            .then((data) => setMovies(data.results));
+            .then((data) => {
+                setNumPages(data.total_pages);
+                setMovies(data.results)});
     };
 
     return (

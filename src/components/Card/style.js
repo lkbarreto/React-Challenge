@@ -2,7 +2,7 @@
 
 export const styles = {
   card: {
-    width: 250,
+    width: 260,
     margin: '4%',
     background: '#f1eded ',
     borderRadius: 16,
@@ -51,10 +51,4 @@ export const styles = {
   button: {
     padding: '1em'
   },
-  // media queries
-  '@media (max-width: 200px)': {
-    button: {
-      width: '100%'
-    }
-  }
 };

@@ -18,6 +18,7 @@ function CardComponent(props) {
             <Card style={styles.card}>
                 <CardMedia
                     component="img"
+                    height={369}
                     image={IMAGE_API + props.item.poster_path}
                     onError="https://thumbs.dreamstime.com/b/transparent-designer-must-have-fake-background-39672616.jpg"
                     alt=""
