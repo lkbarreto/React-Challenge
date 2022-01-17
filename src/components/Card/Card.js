@@ -33,7 +33,7 @@ function CardComponent(props) {
 
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>
-                        <Typography paragraph>Overview:     {console.log(props.item)}</Typography>
+                        <Typography paragraph>Overview:</Typography>
                         <Typography align="justify" paragraph>
                             {props.item.overview}
                         </Typography>

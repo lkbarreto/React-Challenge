@@ -1,4 +1,3 @@
-import React, { useState, useContext } from "react";
 import {Link} from "react-router-dom";
 function Index() {
     return (
