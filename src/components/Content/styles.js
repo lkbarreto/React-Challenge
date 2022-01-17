@@ -3,9 +3,8 @@ export const styles = {
   main: {
     display:'flex',
     paddingTop: '3%',
-    background: 'yellow',
     flexWrap:'wrap',
-    justifyContent:'stretch',
+    justifyContent:'space-between',
     gap:'1%'
   },
   

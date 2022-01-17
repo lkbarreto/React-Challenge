@@ -5,7 +5,7 @@ import Drawer from '../components/Drawer/Drawer';
 import Header from '../components/Header/Header';
 import Content from '../components/Content/Content'
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
     ({ theme, open }) => ({
@@ -42,7 +42,7 @@ export default function Home() {
         <Box sx={{ display: 'flex' }}>
             <Header open={open} handleDrawerOpen={handleDrawerOpen} drawerWidth={drawerWidth}></Header>
             <Drawer open={open} handleDrawerClose={handleDrawerClose} handleDrawerOpen={handleDrawerOpen} drawerWidth={drawerWidth}></Drawer>
-            <Main open={open}>
+            <Main sx={{display:'flex', justifyContent:'center', alignItems:'center'}} open={open}>
                 <Content></Content>
             </Main>
         </Box>
