@@ -24,6 +24,15 @@ export const styles = {
     color: 'white',
     position: 'relative',
     float: 'right',
+    right: '8%',
+    marginTop: '-6%'
+  },
+
+  floatButtonClose:{
+    background: '#f8462c',
+    color: 'white',
+    position: 'relative',
+    float: 'right',
     right: '5%',
     marginTop: '-10%'
   },
@@ -33,9 +42,6 @@ export const styles = {
     borderRadius: 16,
     boxShadow: 'none',
     transition: '0.2s',
-    '&:hover': {
-      transform: 'scale(1.1)',
-    },
   },
 
   warning: {

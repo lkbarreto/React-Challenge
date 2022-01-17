@@ -30,10 +30,10 @@ function Content() {
 
     return (
         <Box style={styles.main} >
+
             {
                 movies.length != 0 && (<>
-                    {console.log(movies)}
-                    {movies.map((movie) => <Card item={movie} />)}
+                    {movies.map((movie) => <Card  item={movie} key={movie.id} />)}
                 </>)}
 
         </Box>

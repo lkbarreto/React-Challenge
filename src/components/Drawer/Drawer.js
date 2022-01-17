@@ -27,8 +27,9 @@ function DrawerComponent(props) {
     }));
 
     return (
-        <div className="Drawer">
+        <div >
             <Drawer
+            style={styles.drawer}
                 sx={{
                     width: props.drawerWidth,
                     flexShrink: 0,
@@ -48,6 +49,14 @@ function DrawerComponent(props) {
                     </IconButton>
                 </DrawerHeader>
                 <Divider />
+                <div style={styles.form}>
+                <TextField  style={styles.input} size="small"  id="outlined-basic" label="Outlined" variant="outlined" />
+
+                <TextField  style={styles.input} size="small"  id="outlined-basic" label="Outlined" variant="outlined" />
+
+                <TextField  style={styles.input} size="small"  id="outlined-basic" label="Outlined" variant="outlined" />
+
+                </div>
                 
 
 

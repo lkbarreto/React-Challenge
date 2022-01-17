@@ -2,8 +2,14 @@ export const styles = {
   primary: {
     background: 'green'
   },
-  warning: {
-    background: 'yellow'
+  drawer:{
+    background: 'red ',
+  },
+  form:{
+    marginTop:'10%',
+  },
+  input:{
+    marginBottom: '10%'
   },
   button: {
     padding: '1em'
