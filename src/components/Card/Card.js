@@ -19,13 +19,14 @@ function CardComponent(props) {
                 <CardMedia
                     component="img"
                     image={IMAGE_API + props.item.poster_path}
+                    onError="https://thumbs.dreamstime.com/b/transparent-designer-must-have-fake-background-39672616.jpg"
                     alt=""
                 />
                 <Fab onClick={() => { setExpanded(!expanded) }} style={styles.floatButton}>
                     <VisibilityIcon />
                 </Fab>
                 <CardContent>
-                    <Rating name="size-small" precision={0.5} readOnly max={10} value={props.item.vote_average} size="small" />
+                    <Rating name="size-normal" precision={0.5} readOnly max={10} value={props.item.vote_average} size="small" />
                     <Typography align="center" noWrap gutterBottom style={styles.title} component="div">
                         {props.item.original_title}
                     </Typography>
@@ -33,7 +34,7 @@ function CardComponent(props) {
 
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>
-                        <Typography paragraph>Overview:</Typography>
+                        <Typography paragraph>Overview:     {console.log(props.item)}</Typography>
                         <Typography align="justify" paragraph>
                             {props.item.overview}
                         </Typography>

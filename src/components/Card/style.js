@@ -25,7 +25,8 @@ export const styles = {
     position: 'relative',
     float: 'right',
     right: '8%',
-    marginTop: '-6%'
+    marginTop: '-10%',
+    marginBottom:"3%"
   },
 
   floatButtonClose:{

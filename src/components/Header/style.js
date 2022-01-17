@@ -1,6 +1,9 @@
 export const styles = {
-  primary: {
-    background: 'green'
+  header: {
+    background: 'white'
+  },
+  icon:{
+    color:'#f8462c'
   },
   warning: {
     background: 'yellow'

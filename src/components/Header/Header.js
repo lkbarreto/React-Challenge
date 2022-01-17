@@ -28,20 +28,23 @@ function Header(props) {
 
     return (
         <div className="Index">
-            <AppBar sx={{ backgroundColor: 'red' }} position="fixed" open={props.open}>
+            <AppBar style={styles.header} position="fixed" open={props.open}>
                 <Toolbar>
                     <IconButton
-                        color="inherit"
+
                         aria-label="open drawer"
                         onClick={props.handleDrawerOpen}
                         edge="start"
                         sx={{ mr: 2, ...(props.open && { display: 'none' }) }}
                     >
-                        <MenuIcon color='primary' />
+                        <MenuIcon style={styles.icon} color='primary' />
                     </IconButton>
-                    <Typography variant="h6" noWrap component="div">
-                        Houm
-                    </Typography>
+
+                    <img
+                        src="https://theme.zdassets.com/theme_assets/10103841/9a0aa0049d2e44a0274970c2a888d2b831155d73.png"
+                        height={60}
+                        loading="lazy"
+                    />
                 </Toolbar>
             </AppBar>
 
