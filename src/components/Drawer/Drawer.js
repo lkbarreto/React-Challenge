@@ -83,12 +83,12 @@ function DrawerComponent(props) {
                 </DrawerHeader>
                 <Divider />
                 <div style={styles.form}>
-                    <TextField style={styles.input} size="small" id="outlined-basic" label="Name" variant="outlined" value={searchTerm}
+                    <TextField style={styles.input} size="small" label="Name" variant="outlined" value={searchTerm}
                         onChange={handleOnChange} />
 
-                    <TextField style={styles.input} size="small" id="outlined-basic" label="Category" variant="outlined" />
+                    <TextField style={styles.input} size="small" label="Category" variant="outlined" />
 
-                    <TextField style={styles.input} size="small" id="outlined-basic" label="Range" variant="outlined" />
+                    <TextField style={styles.input} size="small" label="Range" variant="outlined" />
 
                     <Button disabled={searchTerm === ""} variant="contained" style={styles.button} onClick={searchMovies} endIcon={<FilterAltIcon />}>
                         Filter

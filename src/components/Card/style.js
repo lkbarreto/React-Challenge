@@ -26,7 +26,10 @@ export const styles = {
     float: 'right',
     right: '8%',
     marginTop: '-10%',
-    marginBottom:"3%"
+  },
+
+  rating:{
+    margin:'5%'
   },
 
   floatButtonClose:{

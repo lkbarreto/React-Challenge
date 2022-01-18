@@ -18,14 +18,17 @@ function CardComponent(props) {
                     component="img"
                     height={369}
                     image={IMAGE_API + props.item.poster_path}
-                    onError="https://thumbs.dreamstime.com/b/transparent-designer-must-have-fake-background-39672616.jpg"
+                    onError={({ currentTarget }) => {
+                        currentTarget.onerror = null; // prevents looping
+                        currentTarget.src="https://cloc.condesan.org/intranet/wp-content/plugins/learnpress/assets/images/no-image.png";
+                      }}
                     alt=""
                 />
                 <Fab onClick={() => { setExpanded(!expanded) }} style={styles.floatButton}>
                     <VisibilityIcon />
                 </Fab>
                 <CardContent>
-                    <Rating name="size-normal" precision={0.5} readOnly max={10} value={props.item.vote_average} size="small" />
+                    <Rating style={styles.rating} name="size-normal" precision={0.5} readOnly max={10} value={props.item.vote_average} size="small" />
                     <Typography align="center" noWrap gutterBottom style={styles.title} component="div">
                         {props.item.original_title}
                     </Typography>
